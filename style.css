@@ -125,7 +125,15 @@ p{ margin: 0 0 1em 0; }
   transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease, border-color .15s ease;
 }
 .btn:hover{ transform: translateY(-1px); }
-.btn:focus-visible{ outline: 2px solid var(--gold); outline-offset: 3px; }
+/* Keyboard focus ring — shown only for keyboard/assistive-tech navigation
+   (not mouse clicks), applied consistently to every interactive element:
+   links, buttons, and the member accordion rows below. */
+a:focus-visible,
+button:focus-visible{
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
 
 .btn-primary{ background: var(--ink); color: #fff; }
 .btn-primary:hover{ background: var(--navy); }
@@ -471,11 +479,17 @@ section + section{ border-top: 1px solid var(--line); }
   padding: 16px 22px;
   cursor: pointer;
   list-style: none;
+  outline: none; /* replaced by the explicit :focus-visible rule below,
+                    so the ring looks the same across browsers */
 }
 .member-item summary::-webkit-details-marker{ display: none; }
 .member-item summary::marker{ content: ""; }
 .member-item summary:hover{ background: var(--paper); }
-.member-item summary:focus-visible{ outline: 2px solid var(--gold); outline-offset: -2px; }
+.member-item summary:focus-visible{
+  outline: 2px solid var(--gold);
+  outline-offset: -3px;
+  border-radius: 4px;
+}
 .member-thumb{
   width: 46px;
   height: 46px;
@@ -617,3 +631,4 @@ footer.site-footer .foot-bottom{
    ===================================================================== */
 .legal-wrap{ max-width: 760px; }
 .page-title{ font-size: clamp(2.2rem, 4.5vw, 3rem); }
+
