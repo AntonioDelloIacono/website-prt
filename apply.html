@@ -49,11 +49,10 @@
     <div class="wrap">
       <div>
         <p class="eyebrow">Applications</p>
-        <h1>Bring a research question or a useful contribution</h1>
+        <h1>Share an idea or your interest to contribute</h1>
         <p class="lede">
-          Apply to lead a methodological project or contribute to developing work.
-          Every application is read before any invitation to join is considered.
-          Applying does not itself create membership.
+          Apply to lead or contribute to a research or applied project.
+          Applications are reviewed before any invitation to join is confirmed.
         </p>
       </div>
     </div>
@@ -87,8 +86,9 @@
         <p class="eyebrow">Application form</p>
         <h2>Apply to join the Consortium</h2>
         <p class="lede">
-          Applications help us consider methodological fit, proposed contributions,
-          and capacity across projects. Fields marked with an asterisk (*) are required.
+          Applications help us consider your profile fit, proposed contributions,
+          and capacity across projects. 
+          Fields marked with an asterisk (*) are required.
         </p>
       </div>
 
@@ -104,28 +104,6 @@
         <!-- Honeypot: hidden field that real people never fill in but bots do.
              Formspree silently discards any submission where this is filled. -->
         <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
-
-        <!-- ---- Pathway ---- -->
-        <fieldset class="form-block">
-          <legend>Choose an application pathway *</legend>
-          <p class="field-help">Project leadership is the primary route. Choose contributor if you are not yet ready to lead a project.</p>
-
-          <label class="radio-card">
-            <input type="radio" name="pathway" value="Lead a project" required>
-            <span class="radio-body">
-              <span class="radio-title">Lead a methodological project</span>
-              <span class="radio-note">You have a specific question or study you would like to lead. A short proposal abstract is requested below.</span>
-            </span>
-          </label>
-
-          <label class="radio-card">
-            <input type="radio" name="pathway" value="Contribute to projects">
-            <span class="radio-body">
-              <span class="radio-title">Contribute to developing projects</span>
-              <span class="radio-note">Describe your interests, skills, and availability to support existing work.</span>
-            </span>
-          </label>
-        </fieldset>
 
         <!-- ---- Applicant details ---- -->
         <fieldset class="form-block">
@@ -149,7 +127,7 @@
               <input type="text" id="country" name="country" autocomplete="country-name">
             </p>
             <p class="field">
-              <label for="career">Current career stage</label>
+              <label for="career">Role</label>
               <input type="text" id="career" name="career_stage" list="career-list" placeholder="e.g. PhD student, postdoc, practitioner">
               <datalist id="career-list">
                 <option value="Undergraduate student"></option>
@@ -171,10 +149,10 @@
 
         <!-- ---- Proposal (leaders) ---- -->
         <fieldset class="form-block">
-          <legend>If leading a project</legend>
+          <legend>Sharing an idea</legend>
           <p class="field">
             <label for="proposal">Proposal abstract</label>
-            <span class="field-help">If you selected the leadership pathway, outline your proposed question and approach (around 250 words). Leave blank if contributing.</span>
+            <span class="field-help">If you have an idea to share, outline your proposed question and approach (around 300 words). Leave blank if your only interest is to join the Consortium</span>
             <textarea id="proposal" name="proposal_abstract" rows="6"></textarea>
           </p>
         </fieldset>
@@ -184,17 +162,16 @@
           <legend>Questions for all applicants</legend>
 
           <p class="field">
-            <label for="interests">What methodological problems in resistance training interest you most? *</label>
-            <textarea id="interests" name="methodological_interests" rows="4" required></textarea>
+            <label for="expertise">What is your main expertise? *</label>
+            <textarea id="expertise" name="profile_expertise" rows="4" required></textarea>
           </p>
           <p class="field">
-            <label for="contribution">How would you like to contribute over the next six months? *</label>
-            <textarea id="contribution" name="intended_contribution" rows="4" required></textarea>
+            <label for="practice">What is/are your main area(s) of research or practice? *</label>
+            <textarea id="practice" name="area_practice" rows="4" required></textarea>
           </p>
           <p class="field">
-            <label for="time">Approximately how much time can you commit each month?</label>
-            <span class="field-help">Give a realistic monthly estimate and note any limits or changes you anticipate.</span>
-            <input type="text" id="time" name="time_commitment" placeholder="e.g. 4–6 hours per month">
+            <label for="capacity">In which capacity would you like to collaborate? *</label>
+            <textarea id="capacity" name="intended_capacity" rows="4" required></textarea>
           </p>
         </fieldset>
 
