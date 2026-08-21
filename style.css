@@ -632,3 +632,139 @@ footer.site-footer .foot-bottom{
 .legal-wrap{ max-width: 760px; }
 .page-title{ font-size: clamp(2.2rem, 4.5vw, 3rem); }
 
+
+/* =====================================================================
+   APPLICATION FORM (apply.html)
+   ===================================================================== */
+.apply-form{ margin-top: 8px; }
+
+.form-block{
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 0 0 10px;
+  padding: 28px 0 8px;
+}
+.form-block legend{
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ink);
+  padding: 0;
+  margin-bottom: 6px;
+}
+
+.field-help{
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 4px 0 16px;
+  max-width: 60ch;
+}
+
+.field{ margin: 0 0 18px; }
+.field label{
+  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 7px;
+  color: var(--ink);
+}
+.field-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 24px;
+}
+.field-grid .field{ margin-bottom: 16px; }
+@media (max-width: 620px){
+  .field-grid{ grid-template-columns: 1fr; }
+}
+
+/* Text inputs and textareas */
+.apply-form input[type="text"],
+.apply-form input[type="email"],
+.apply-form input[type="url"],
+.apply-form textarea{
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--ink);
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 11px 13px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.apply-form input::placeholder,
+.apply-form textarea::placeholder{ color: #9aa0aa; }
+.apply-form input:focus,
+.apply-form textarea:focus{
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(185,138,62,0.18);
+}
+.apply-form textarea{ resize: vertical; min-height: 90px; }
+
+/* Radio "cards" for the pathway choice */
+.radio-card{
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper-2);
+  padding: 16px 18px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.radio-card:hover{ border-color: var(--gold); }
+.radio-card input[type="radio"]{
+  margin-top: 3px;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--gold);
+  flex-shrink: 0;
+}
+.radio-card:has(input:checked){
+  border-color: var(--gold);
+  box-shadow: 0 0 0 2px rgba(185,138,62,0.2);
+}
+.radio-body{ display: flex; flex-direction: column; gap: 3px; }
+.radio-title{ font-weight: 600; color: var(--ink); }
+.radio-note{ font-size: 0.9rem; color: var(--muted); }
+
+/* Consent checkbox row */
+.consent-row{
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 0.95rem;
+  color: var(--ink);
+  line-height: 1.5;
+}
+.consent-row input[type="checkbox"]{
+  margin-top: 3px;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--gold);
+  flex-shrink: 0;
+}
+.consent-row a{ color: var(--gold-ink); text-decoration: underline; }
+
+/* Honeypot spam trap — hidden from real users */
+.hp-field{
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-actions{
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 26px;
+  padding-top: 26px;
+  border-top: 1px solid var(--line);
+}

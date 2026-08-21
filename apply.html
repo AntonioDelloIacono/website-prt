@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apply to join — Personalised Resistance Training Consortium</title>
+<meta name="description" content="Apply to lead or contribute to a project with the Personalised Resistance Training Consortium.">
+
+<link rel="canonical" href="https://www.prtconsortium.org/apply.html">
+
+<link rel="icon" type="image/png" href="images/favicon-32.png">
+<link rel="apple-touch-icon" href="images/favicon-512.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<!-- =====================================================================
+     HEADER
+     Simplified header (logo links home). The main navigation lives on the
+     homepage; this is a standalone application page reached from the
+     "Apply to join" button in the Get involved section.
+     ===================================================================== -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="images/logo.png" alt="Personalised Resistance Training Consortium logo">
+    </a>
+    <nav class="primary-nav" id="primary-nav">
+      <ul>
+        <li><a href="index.html#involved">&larr; Back to the site</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- ===================================================================
+       INTRO
+       =================================================================== -->
+  <section class="hero tag-dark" id="top">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Applications</p>
+        <h1>Bring a research question or a useful contribution</h1>
+        <p class="lede">
+          Apply to lead a methodological project or contribute to developing work.
+          Every application is read before any invitation to join is considered.
+          Applying does not itself create membership.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       APPLICATION FORM
+       =====================================================================
+       HOW SUBMISSIONS REACH YOU — READ THIS ONCE, THEN YOU'RE DONE:
+
+       This form sends every submission to your email inbox via Formspree,
+       a free service that handles form submissions for static websites
+       (GitHub Pages cannot process forms on its own). One-time setup:
+
+         1. Go to https://formspree.io and create a free account using
+            antonio.delloiacono@uws.ac.uk
+         2. Create a new form; it will give you a form endpoint that looks
+            like:  https://formspree.io/f/abcdwxyz
+         3. In the <form> tag just below, replace YOUR_FORM_ID with the code
+            after /f/ (e.g. action="https://formspree.io/f/abcdwxyz").
+         4. Submit the form once yourself to confirm; Formspree emails you a
+            one-time confirmation link the first time. Done.
+
+       Free tier = 50 submissions/month, emailed to you. If you ever outgrow
+       that, the same form works with paid tiers or alternatives (see the
+       notes file included with this site).
+       =================================================================== -->
+  <section id="application">
+    <div class="wrap legal-wrap">
+      <div class="section-head">
+        <p class="eyebrow">Application form</p>
+        <h2>Apply to join the Consortium</h2>
+        <p class="lede">
+          Applications help us consider methodological fit, proposed contributions,
+          and capacity across projects. Fields marked with an asterisk (*) are required.
+        </p>
+      </div>
+
+      <!-- Replace YOUR_FORM_ID (see instructions above). Until you do, the
+           form will not send anywhere — the email fallback below still works. -->
+      <form class="apply-form"
+            action="https://formspree.io/f/xkjwyqep"
+            method="POST">
+
+        <!-- Lets you label the email subject line Formspree sends you -->
+        <input type="hidden" name="_subject" value="New PRT Consortium application">
+
+        <!-- Honeypot: hidden field that real people never fill in but bots do.
+             Formspree silently discards any submission where this is filled. -->
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
+
+        <!-- ---- Pathway ---- -->
+        <fieldset class="form-block">
+          <legend>Choose an application pathway *</legend>
+          <p class="field-help">Project leadership is the primary route. Choose contributor if you are not yet ready to lead a project.</p>
+
+          <label class="radio-card">
+            <input type="radio" name="pathway" value="Lead a project" required>
+            <span class="radio-body">
+              <span class="radio-title">Lead a methodological project</span>
+              <span class="radio-note">You have a specific question or study you would like to lead. A short proposal abstract is requested below.</span>
+            </span>
+          </label>
+
+          <label class="radio-card">
+            <input type="radio" name="pathway" value="Contribute to projects">
+            <span class="radio-body">
+              <span class="radio-title">Contribute to developing projects</span>
+              <span class="radio-note">Describe your interests, skills, and availability to support existing work.</span>
+            </span>
+          </label>
+        </fieldset>
+
+        <!-- ---- Applicant details ---- -->
+        <fieldset class="form-block">
+          <legend>Applicant details</legend>
+
+          <div class="field-grid">
+            <p class="field">
+              <label for="name">Full name *</label>
+              <input type="text" id="name" name="name" required autocomplete="name">
+            </p>
+            <p class="field">
+              <label for="email">Email address *</label>
+              <input type="email" id="email" name="email" required autocomplete="email">
+            </p>
+            <p class="field">
+              <label for="institution">Institution or organisation</label>
+              <input type="text" id="institution" name="institution" autocomplete="organization">
+            </p>
+            <p class="field">
+              <label for="country">Country or region</label>
+              <input type="text" id="country" name="country" autocomplete="country-name">
+            </p>
+            <p class="field">
+              <label for="career">Current career stage</label>
+              <input type="text" id="career" name="career_stage" list="career-list" placeholder="e.g. PhD student, postdoc, practitioner">
+              <datalist id="career-list">
+                <option value="Undergraduate student"></option>
+                <option value="Master's student"></option>
+                <option value="PhD student"></option>
+                <option value="Postdoctoral researcher"></option>
+                <option value="Early-career academic"></option>
+                <option value="Established academic"></option>
+                <option value="Practitioner / coach"></option>
+                <option value="Industry / applied"></option>
+              </datalist>
+            </p>
+            <p class="field">
+              <label for="profile">Institutional, ORCID, or professional profile</label>
+              <input type="url" id="profile" name="profile" placeholder="https://orcid.org/…  (optional)">
+            </p>
+          </div>
+        </fieldset>
+
+        <!-- ---- Proposal (leaders) ---- -->
+        <fieldset class="form-block">
+          <legend>If leading a project</legend>
+          <p class="field">
+            <label for="proposal">Proposal abstract</label>
+            <span class="field-help">If you selected the leadership pathway, outline your proposed question and approach (around 250 words). Leave blank if contributing.</span>
+            <textarea id="proposal" name="proposal_abstract" rows="6"></textarea>
+          </p>
+        </fieldset>
+
+        <!-- ---- Questions for all ---- -->
+        <fieldset class="form-block">
+          <legend>Questions for all applicants</legend>
+
+          <p class="field">
+            <label for="interests">What methodological problems in resistance training interest you most? *</label>
+            <textarea id="interests" name="methodological_interests" rows="4" required></textarea>
+          </p>
+          <p class="field">
+            <label for="contribution">How would you like to contribute over the next six months? *</label>
+            <textarea id="contribution" name="intended_contribution" rows="4" required></textarea>
+          </p>
+          <p class="field">
+            <label for="time">Approximately how much time can you commit each month?</label>
+            <span class="field-help">Give a realistic monthly estimate and note any limits or changes you anticipate.</span>
+            <input type="text" id="time" name="time_commitment" placeholder="e.g. 4–6 hours per month">
+          </p>
+        </fieldset>
+
+        <!-- ---- Consent ---- -->
+        <fieldset class="form-block">
+          <legend>Data handling and consent</legend>
+          <p class="field-help">
+            Please do not submit confidential participant data, unpublished datasets,
+            sensitive personal information, or material you are not authorised to share.
+          </p>
+
+          <label class="consent-row">
+            <input type="checkbox" name="consent" value="Consent given" required>
+            <span>
+              I consent to the information in this form being used to consider my
+              application and to contact me about it, in line with the
+              <a href="privacy.html" target="_blank" rel="noopener">Consortium privacy notice</a>. *
+              <span class="field-help" style="display:block;margin-top:6px;">This box is not pre-selected. Your application is not sent until you select &ldquo;Submit form&rdquo; below.</span>
+            </span>
+          </label>
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-gold">Submit form</button>
+          <a class="btn btn-ghost" href="index.html#involved">Cancel</a>
+        </div>
+
+        <p class="field-help" style="margin-top:22px;">
+          If the form will not submit, you can email your application directly to
+          <a href="mailto:antonio.delloiacono@uws.ac.uk?subject=PRT%20Consortium%20application">antonio.delloiacono@uws.ac.uk</a>.
+        </p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- =====================================================================
+     FOOTER (matches the main site)
+     ===================================================================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-col">
+        <img src="images/logo-white.png" alt="Personalised Resistance Training Consortium">
+        <p>An international research collaboration developing the foundations for
+        personalised resistance training prescription.</p>
+      </div>
+      <div class="foot-col">
+        <h3>Site</h3>
+        <ul>
+          <li><a href="index.html#top">Mission</a></li>
+          <li><a href="index.html#problem">Framework</a></li>
+          <li><a href="index.html#framework">Focus areas</a></li>
+          <li><a href="index.html#members">Members</a></li>
+          <li><a href="index.html#how-we-work">How we work</a></li>
+          <li><a href="index.html#resources">Evidence</a></li>
+          <li><a href="index.html#education">Education</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h3>Contact</h3>
+        <ul>
+          <li class="contact-person">
+            <span class="name">Antonio Dello Iacono</span>
+            <span class="affil">University of the West of Scotland</span>
+            <a href="mailto:antonio.delloiacono@uws.ac.uk">antonio.delloiacono@uws.ac.uk</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Personalised Resistance Training Consortium.</span>
+      <a class="privacy-link" href="privacy.html">Privacy</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
